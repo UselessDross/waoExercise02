@@ -2,12 +2,8 @@
 import { Request, Response } from "express";
 import mongoose from "mongoose";
 
-// POST   /orders/
-// GET    /orders
-// GET    /orders/:uid
-// PUT    /orders/:uid
-// PATCH  /orders/:uid
-// DELETE /orders/:uid
+
+mongoose.connect('mongodb://localhost:27017/waoDB')
 
 
 const endpointPost = async (req: Request, res: Response) =>{
