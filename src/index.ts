@@ -1,11 +1,15 @@
-const express = require('express')
+// begining.were: [> index <]--<#>[  router-controlls  ]--<#>[  endpoints  ]
+import  express  from "express";
+import { endRoute } from "./router-controlls";
+
+
 const app = express()
-const port = 3000
+ const hostname = '127.0.0.1';
+ const port = 3000;
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+app.use('', endRoute)
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+
+ app.listen(3000, () => {
+    console.log(`Server running 'hello-mongoose' on ${port}`)
+  })
